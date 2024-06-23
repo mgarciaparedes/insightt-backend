@@ -8,9 +8,7 @@ const getTaskList = async (req, res = response) => {
   const taskList = await Task.find({});
 
   if (taskList) {
-    return res.json({
-      taskList,
-    });
+    return res.json(taskList);
   } else {
     return res.status(500).json({
       message: "An error occurred, please try again.",
