@@ -1,23 +1,9 @@
 const express = require("express");
 require("dotenv").config();
-// const session = require('express-session');
-// const passport = require('./passport/passportConfig');
 const cors = require("cors");
 const { dbConnection } = require("./database/config");
 
 const app = express();
-
-// Configura la sesión
-// app.use(
-//   session({
-//     secret: process.env.SESSION_SECRET,
-//     resave: false,
-//     saveUninitialized: true,
-//   })
-// );
-
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 /*Base de datos*/
 dbConnection();

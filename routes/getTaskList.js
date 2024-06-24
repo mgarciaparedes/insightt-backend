@@ -1,5 +1,5 @@
 const { Router } = require("express");
-
+const {validateJWT} = require('../middlewares/validate-jwt');
 const router = Router();
 
 const {
@@ -8,6 +8,7 @@ const {
 
 router.get(
   "/getTaskList",
+  validateJWT,
   getTaskList
 );
 
